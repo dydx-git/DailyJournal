@@ -1,4 +1,4 @@
-﻿using Microsoft.Toolkit.Uwp.UI.Controls;
+﻿using Microsoft.UI.Xaml.Controls;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -45,15 +45,29 @@ namespace DailyJournal
         private void CreateNewEntryButton_Click(object sender, RoutedEventArgs e)
         {
             TabViewItem newItem = new TabViewItem();
-            var entryText = String.Format($"Entry{Tabs.Items.Count + 1}");
+            var entryText = String.Format($"Entry{Tabs.TabItems.Count + 1}");
             newItem.Header = entryText;
 
             RichEditBox reb = new RichEditBox();
             reb.HorizontalAlignment = HorizontalAlignment.Stretch;
             reb.VerticalAlignment= VerticalAlignment.Stretch;
             newItem.Content = reb;
-            Tabs.Items.Add(newItem);
-            Tabs.SelectedIndex = Tabs.Items.Count - 1;
+            Tabs.TabItems.Add(newItem);
+            Tabs.SelectedIndex = Tabs.TabItems.Count - 1;
+        }
+
+        private void Tabs_AddTabButtonClick(TabView sender, object args)
+        {
+            TabViewItem newItem = new TabViewItem();
+            var entryText = String.Format($"Entry{Tabs.TabItems.Count + 1}");
+            newItem.Header = entryText;
+
+            RichEditBox reb = new RichEditBox();
+            reb.HorizontalAlignment = HorizontalAlignment.Stretch;
+            reb.VerticalAlignment = VerticalAlignment.Stretch;
+            newItem.Content = reb;
+            Tabs.TabItems.Add(newItem);
+            Tabs.SelectedIndex = Tabs.TabItems.Count - 1;
         }
     }
 }
