@@ -41,37 +41,6 @@
             </muxc:TabView.TabItems>
         </muxc:TabView>
 
-        <!--<muxc:TabView x:Name="Tabs"
-                          Grid.Column="1"
-                          Grid.RowSpan="2" 
-                          Margin="5">
-            <muxc::TabViewItem Header="Entry 1">
-                <RichEditBox x:Name="MainRichEdit"
-                             HorizontalAlignment="Stretch"
-                             VerticalAlignment="Stretch" />
-            </muxc:>
-            <controls:TabViewItem Header="Entry 2">
-                <RichEditBox x:Name="MainRichEdit2"
-                             HorizontalAlignment="Stretch"
-                             VerticalAlignment="Stretch" />
-            </controls:TabViewItem>
-            <controls:TabView.TabActionHeader>
-                <Button x:Name="AddTabButtonUpper"
-                        Width="48"
-                        Height="40"
-                        Margin="-1,0,0,0"
-                        BorderThickness="1"
-                        Background="Transparent"
-                        Style="{StaticResource ButtonRevealStyle}">
-                    <Viewbox MaxWidth="16"
-                             MaxHeight="16">
-                        <FontIcon FontFamily="Segoe MDL2 Assets"
-                                  Glyph="&#xE710;" />
-                    </Viewbox>
-                </Button>
-            </controls:TabView.TabActionHeader>
-        </muxc:TabView>-->
-
         <CalendarView HorizontalAlignment="Left"
                       VerticalAlignment="Top" />
         <ListView x:Name="EntriesListView"
